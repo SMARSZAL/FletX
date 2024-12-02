@@ -122,6 +122,9 @@ class CounterView(Xview):
             ]
         )
 ```
+
+<img src="./counter.gif"/>
+
 ## ❤️ Feedback
 Found this example helpful? Let us know!
 
