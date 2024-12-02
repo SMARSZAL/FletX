@@ -9,7 +9,6 @@ from views.counter_view import CounterView
 
 def main(page: ft.Page):
     page.title = "FletX counter example"
-    page.vertical_alignment = ft.MainAxisAlignment.CENTER
 
     Xapp(
         page=page,
