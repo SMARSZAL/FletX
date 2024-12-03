@@ -126,7 +126,7 @@ class CounterView(Xview):
 <img src="./counter.gif"/>
 
 ## ❤️ Feedback
-Found this example helpful? Let us know!
+Found this repository helpful? Let us know!
 
 - ⭐ Star the [FletX repository](https://github.com/saurabhwadekar/FletX)
 - Report issues or suggest improvements in the [Issues section](https://github.com/saurabhwadekar/FletX/issues)
