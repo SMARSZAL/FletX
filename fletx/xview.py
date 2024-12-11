@@ -11,7 +11,7 @@ class Xview:
         self.init()
 
     def init(self):
-        pass
+        ...
 
     def update(self):
         self.page.update()
@@ -25,6 +25,9 @@ class Xview:
             self.page.views.pop()
             self.page.views.pop()
             self.page.go(pre_r)
+            
+    def onBuildComplete(self):
+        ...
             
     def build(self):
         return View(

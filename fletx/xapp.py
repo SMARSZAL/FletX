@@ -29,6 +29,7 @@ class Xapp:
                 view = r["view"](page=self.__page,state = self.__state,params=self.__params)
                 self.__page.views.append(view.build())
                 self.__page.update()
+                view.onBuildComplete()
                 break
 
         if route_match == None:
