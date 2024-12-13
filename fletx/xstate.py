@@ -10,6 +10,18 @@ class Xstate:
     async def update_async(self):
         self.page.update_async()
 
+    def go(self,route):
+        self.page.go(route=route)
+    
+    def pop_go(self,route):
+        if self.page.views.__len__()>=1:
+            self.page.views.pop()
+            self.page.go(route=route)
+    
+    def pop_all_go(self,route):
+            self.page.views.clear()
+            self.page.go(route=route)
+
     def back(self,*args, **kwargs):
         if self.page.views.__len__()>1:
             pre_r = self.page.views[-2].route

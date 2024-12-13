@@ -10,6 +10,6 @@ class HomeView(Xview):
             controls=[
                 ft.Text("Home View"),
                 ft.Text(f"Counts = {self.state.txt_number.value}"),
-                ft.ElevatedButton("Go Counter View",on_click=lambda e:self.page.go("/counter"))
+                ft.ElevatedButton("Go Counter View",on_click=lambda e:self.go("/counter"))
             ]
         )

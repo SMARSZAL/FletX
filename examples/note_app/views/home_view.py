@@ -38,7 +38,7 @@ class HomeView(Xview):
         for i in self.state.notes:
             self.columnRef.current.controls.append(
                 ft.Container(
-                    on_click=lambda e,title=i: self.page.go(f"/edit_note/{title}"),
+                    on_click=lambda e,title=i: self.go(f"/edit_note/{title}"),
                     content=ft.Row(
                         controls=[
                             ft.IconButton(icon=ft.icons.DELETE,on_click=lambda e,title=i: (self.state.deleteNote(title),self.setAllNotesCard())),

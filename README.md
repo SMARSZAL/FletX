@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)  
 [![Platform](https://img.shields.io/badge/Platform-Flet-blue)](#)  
 [![Version](https://img.shields.io/badge/Version-0.1.0-brightgreen)](#)  
+[![Downloads](https://static.pepy.tech/badge/fletx)](https://pepy.tech/project/fletx)
 
 FletX is a powerful **routing** and **state management** library for the Flet framework. It simplifies application development by separating UI and logic while providing intuitive navigation solutions.
 
@@ -94,7 +95,7 @@ class HomeView(Xview):
             controls=[
                 ft.Text("Home View"),
                 ft.Text(f"Counts = {self.state.txt_number.value}"),
-                ft.ElevatedButton("Go Counter View",on_click=lambda e:self.page.go("/counter"))
+                ft.ElevatedButton("Go Counter View",on_click=lambda e:self.go("/counter"))
             ]
         )
 ```
