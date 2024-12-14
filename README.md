@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)  
 [![Platform](https://img.shields.io/badge/Platform-Flet-blue)](#)  
-[![Version](https://img.shields.io/badge/Version-0.1.0-brightgreen)](#)  
+[![Version](https://img.shields.io/badge/Version-0.1.1-brightgreen)](#)  
 [![Downloads](https://static.pepy.tech/badge/fletx)](https://pepy.tech/project/fletx)
 
 FletX is a powerful **routing** and **global state management** library for the Flet framework. It simplifies application development by separating UI and logic while providing intuitive navigation solutions.
