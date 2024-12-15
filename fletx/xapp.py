@@ -31,7 +31,6 @@ class Xapp:
             self.__page.go(self.__page.route)
 
     def route_event_handler(self,route):
-        print(route)
         route_match = None
 
         for r in self.__routes:
