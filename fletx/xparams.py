@@ -11,7 +11,7 @@ class Xparams:
         except AttributeError:
             pass
 
-    def get_all(self):
+    def get_all(self)->dict:
         return self.__dict__
     
     def __str__(self) -> str:
