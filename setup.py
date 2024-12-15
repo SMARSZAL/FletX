@@ -6,7 +6,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name = "fletx",
-    version = "0.1.2",
+    version = "0.1.3",
     author="Saurabh Wadekar [ INDIA ]",
     packages=["fletx"],
     license="MIT",
