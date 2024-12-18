@@ -1,3 +1,7 @@
+<div style="text-align: center;">
+<img src="./fletx.png"/>
+</div>
+
 # FletX  
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)  
