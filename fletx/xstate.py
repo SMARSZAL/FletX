@@ -1,4 +1,5 @@
 from flet import Page
+from typing import Callable
 
 class Xstate:
     def __init__(self,page:Page):
@@ -28,3 +29,6 @@ class Xstate:
             self.page.views.pop()
             self.page.views.pop()
             self.page.go(pre_r)
+    
+    def inject_in_state(self,func:Callable):
+            self.__setattr__( func.__name__, func)
