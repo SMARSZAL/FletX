@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-<img src="docs/assets/fletx.png"/>
+<img src="assets/fletx.png"/>
 </div>
 
 # FletX  
@@ -128,7 +128,7 @@ class CounterView(Xview):
         )
 ```
 
-<img src="docs/assets/counter.gif"/>
+<img src="assets/counter.gif"/>
 
 ## ❤️ Feedback
 Found this repository helpful? Let us know!

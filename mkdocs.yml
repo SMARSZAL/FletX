@@ -1,0 +1,43 @@
+site_name: FletX
+site_url: https://mydomain.org/fletx
+repo_url: https://github.com/saurabhwadekar/FletX
+repo_name: saurabhwadekar/fletx
+theme:
+  name: material
+  logo: assets/fletx.svg
+  favicon: assets/fletx.png
+  icon:
+    repo: fontawesome/brands/github
+
+
+  palette: 
+    primary: indigo
+    accent: indigo
+
+  palette: 
+  # Palette toggle for light mode
+    - scheme: slate 
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - content.code.copy
+    - content.code.annotate
+    - navigation.footer
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/medium
+      link: https://fosstodon.org/@squidfunk
+    - icon: fontawesome/brands/youtube
+      link: https://fosstodon.org/@squidfunk
+    - icon: fontawesome/brands/github
+      link: https://github.com/saurabhwadekar/FletX
