@@ -3,7 +3,7 @@ name: Deploy MkDocs to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change to your default branch if needed
+      - main
 
 jobs:
   deploy:
@@ -16,12 +16,15 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.9'  # Use the version compatible with MkDocs
+        python-version: '3.9'
 
     - name: Install dependencies
       run: |
-        pip install mkdocs-material==9.5.49  # If you're using a theme
+        pip install mkdocs
+        pip install mkdocs-material
 
     - name: Deploy to GitHub Pages
+      env:
+        TOKEN: ${{ secrets.GH_PAT }}
       run: |
-        mkdocs gh-deploy
+        mkdocs gh-deploy --force --remote-name origin
