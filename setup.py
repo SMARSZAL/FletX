@@ -8,7 +8,7 @@ setup(
     name = "fletx",
     version = "0.1.6",
     author="Saurabh Wadekar [ INDIA ]",
-    packages=["fletx"],
+    packages=["fletx",'fletx.controls'],
     license="MIT",
     maintainer="Saurabh Wadekar",
     maintainer_email="saurabhwadekar420@gmail.com",
