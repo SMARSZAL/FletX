@@ -1,0 +1,31 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Replace with your main branch name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        pip install mkdocs mkdocs-material
+
+    - name: Deploy to GitHub Pages
+      env:
+        TOKEN: ${{ secrets.GH_PAT }}
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        mkdocs gh-deploy --force --remote-name origin --remote-branch gh-pages
