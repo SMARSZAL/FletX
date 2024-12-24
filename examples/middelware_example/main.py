@@ -9,7 +9,7 @@ from views.dashboard_view import DashboardView
 from middlewares.main_middleware import MainMiddleware
 
 def main(page:ft.Page):
-    page.title = "Flet & FletX Bottom Navigation"
+    page.title = "Flet & FletX Middleware Example"
 
     Xapp(
         page=page,

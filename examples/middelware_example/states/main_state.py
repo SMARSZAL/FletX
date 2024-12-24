@@ -18,4 +18,8 @@ class MainState(Xstate):
             self.username.current.error_text = "Invalid Username Or Password"
             self.password.current.error_text = "Invalid Username Or Password"
             self.update()
+
+    def logout(self,e):
+        self.is_authenticated = False
+        self.go("/")
         
