@@ -22,13 +22,15 @@ class Xapp:
             routes:list[route],
             state:Xstate = None,
             middleware:Xmiddleware = None,
-            init_route:str = None
+            init_route:str = None,
+            not_found_view :Xview= NotFoundView,
             ):
         
         self.__page = page
         self.__middleware = middleware
         self.__routes = routes
         self.__params = Xparams()
+        self.__404_not_found_view = not_found_view
         page.on_route_change = self.route_event_handler
         page.views.pop()
 
@@ -64,6 +66,6 @@ class Xapp:
                 break
 
         if route_match == None:
-            self.__page.views.append(NotFoundView(page=self.__page,state = self.__state,params=Xparams()).build())
+            self.__page.views.append(self.__404_not_found_view(page=self.__page,state = self.__state,params=Xparams()).build())
             self.__page.update()
 
