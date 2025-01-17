@@ -1,31 +1,25 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy MkDocs Site
 
 on:
   push:
     branches:
-      - main  # Replace with your main branch name
+      - main  # Apni default branch ka naam yahan specify karein
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'  # Apne requirement ke mutabiq version specify karein
 
-    - name: Install dependencies
-      run: |
-        pip install mkdocs mkdocs-material
+      - name: Install MkDocs
+        run: |
+          pip install mkdocs mkdocs-material
 
-    - name: Deploy to GitHub Pages
-      env:
-        TOKEN: ${{ secrets.GH_PAT }}
-      run: |
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
-        mkdocs gh-deploy --force --remote-name origin --remote-branch gh-pages
+      - name: Deploy MkDocs site
+        run: mkdocs gh-deploy --force
