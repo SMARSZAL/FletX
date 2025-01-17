@@ -14,4 +14,5 @@ jobs:
 
       - name: Deploy MkDocs Configuration Only (No HTML)
         run: |
+          pip install -r requirements.txt
           mkdocs serve
