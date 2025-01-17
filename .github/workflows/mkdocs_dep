@@ -1,0 +1,18 @@
+name: Deploy MkDocs Configuration Only
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Deploy MkDocs Configuration Only (No HTML)
+        run: |
+          pip install -r requirements.txt
+          mkdocs serve
