@@ -1,4 +1,4 @@
-name: Deploy MkDocs Source Files
+name: Deploy MkDocs Configuration Only
 
 on:
   push:
@@ -9,17 +9,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Deploy MkDocs Source Files (No HTML)
+      - name: Deploy MkDocs Configuration Only (No HTML)
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "github-actions[bot]"
+          
           git checkout --orphan gh-pages
           git rm -rf .
-          cp -r docs/* .  # Sirf docs folder deploy karne ke liye
+          
+          # Sirf mkdocs.yml aur docs folder deploy karna
           cp mkdocs.yml .
+          cp -r docs .
+          
           git add .
-          git commit -m "Deploy MkDocs source files"
+          git commit -m "Deploy MkDocs source files only"
           git push origin gh-pages --force
