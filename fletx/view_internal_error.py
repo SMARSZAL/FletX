@@ -131,8 +131,8 @@ class InternalErrorView(Xview):
                 ),
                 ft.IconButton(
                     icon=ft.Icons.ARROW_BACK,
-                    bgcolor=ft.colors.BLUE,
-                    icon_color=ft.colors.WHITE,
+                    bgcolor=ft.Colors.BLUE,
+                    icon_color=ft.Colors.WHITE,
                     on_click=self.back
                 ),
             
